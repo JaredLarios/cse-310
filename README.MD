@@ -1,48 +1,39 @@
-# CSE310 – Applied Programming
+# Overview
 
-This repository contains the work completed for the **CSE 310: Applied Programming** course.  
-Each module focuses on learning and applying different technologies through hands-on projects.
+This project is part of my journey as a software engineer to strengthen my skills across multiple programming areas — backend development, mobile application design, and game programming. Each module is designed to help me explore new technologies and apply what I learn through practical, hands-on projects.
 
----
+The software in this repository is divided into three main modules:
+1. A **Rust-based RESTful API** that demonstrates server-side development and database integration.
+2. A **mobile application** that focuses on UI design, data handling, and API communication.
+3. A **game framework project** that explores game logic, rendering, and interactivity.
 
-## 📘 Module 1: Rust Language – RESTful API
-
-In the first module, the focus is on learning **Rust** and applying it to build a **CRUD Web API**.  
-The project will demonstrate concepts such as:
-- Structs, Enums, and Traits  
-- Error handling in Rust  
-- Web development with **Actix-Web**  
-- Data persistence using **SQLite**  
-- API documentation with **Swagger (utoipa or paperclip)**  
-
-**Goal:** Create a fully functional REST API that manages resources using CRUD operations and is well-documented.
+The purpose of this software collection is to improve my understanding of software architecture, cross-platform development, and programming best practices by applying different tools and frameworks in real-world scenarios.
 
 ---
 
-## 📱 Module 2: Mobile App Development
+# Development Environment
 
-In the second module, the goal is to design and develop a **mobile application**.  
-This project will apply concepts of UI design, data handling, and integration with external APIs or databases.  
-Technologies may include **Flutter**, **React Native**, or **Kotlin** (depending on chosen platform).
+The development environment includes:
+- **Rust** for backend API development using **Actix-Web** and **SQLite** for data persistence.
+- **Visual Studio Code** as the main IDE.
+- **Git & GitHub** for version control and collaboration.
+- Future modules will include:
+  - **Flutter or Kotlin** for mobile development.
+  - **Unity, Godot, or Bevy** for game framework exploration.
 
-**Goal:** Build a simple but complete mobile application that demonstrates core mobile development skills.
-
----
-
-## 🎮 Module 3: Game Framework
-
-In the final module, the focus is on **Game Development** using a modern game engine such as **Unity**, **Godot**, or **Bevy (Rust)**.  
-This project will explore:
-- Game loops and physics  
-- Sprite rendering and input handling  
-- Scene management  
-- Basic AI or player interactions  
-
-**Goal:** Develop a small playable game demonstrating the principles of programming, creativity, and design learned throughout the course.
+Programming Languages used:
+- **Rust** (Module 1)
+- **Dart** (Module 2 – Mobile)
+- **Rust** (Module 3 – Game Framework)
 
 ---
 
-## ✍️ Author
-**E. Jared Larios**  
-CSE 310 – Applied Programming  
-Brigham Young University–Idaho
+# Useful Websites
+
+* [Rust Official Documentation](https://www.rust-lang.org/learn)
+* [Actix Web Framework Docs](https://actix.rs/docs/)
+* [SQLite Documentation](https://www.sqlite.org/docs.html)
+* [Swagger / Utoipa for Rust API Docs](https://docs.rs/utoipa/latest/utoipa/)
+* [Bevy Game Engine](https://bevyengine.org/)
+* [Flutter Documentation](https://flutter.dev/docs)
+* [GitHub Guides](https://guides.github.com/)
