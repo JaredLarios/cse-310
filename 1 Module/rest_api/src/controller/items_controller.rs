@@ -3,7 +3,7 @@ use serde::{Deserialize};
 use uuid::Uuid;
 use serde_json::json;
 use crate::schema::items_schema::Item;
-use crate::models::items_model::{get_items_list};
+use crate::models::items_model::{get_items_list, get_item_by_uuid};
 use sqlx::{SqlitePool};
 
 #[derive(Deserialize)]
@@ -21,11 +21,7 @@ pub async fn get_items(pool: web::Data<SqlitePool>) -> HttpResponse {
 }
 
 pub async fn get_item(query: web::Query<ItemQuery>, pool: web::Data<SqlitePool>) -> HttpResponse {
-    let item = Item {
-            uuid: query.item_id.to_string(),
-            name: String::from("Item 1"),
-            description: String::from("Description 1"),
-        };
+    let item = get_item_by_uuid(&query.item_id,&pool).await.unwrap();
     HttpResponse::Ok().json(item)
 }
 
