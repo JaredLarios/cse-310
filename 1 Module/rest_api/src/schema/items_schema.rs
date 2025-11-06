@@ -8,3 +8,9 @@ pub struct Item {
     pub name: String,
     pub description: String,
 }
+
+#[derive(Serialize, Deserialize)]
+pub struct ItemBase {
+    pub name: String,
+    pub description: String,
+}
