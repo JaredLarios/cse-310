@@ -42,3 +42,17 @@ pub async fn edit_item(uuid: &Uuid, item: ItemBase, pool: &web::Data<SqlitePool>
         .await?;
     Ok(*uuid)
 }
+
+pub async fn remove_item(uuid: &Uuid, pool: &web::Data<SqlitePool>) -> Result<Uuid, sqlx::Error> {
+    let result = sqlx::query("DELETE FROM items WHERE uuid = ?1")
+        .bind(uuid.to_string())
+        .execute(pool.get_ref())
+        .await?;
+
+    if result.rows_affected() == 0 {
+        // You can return a custom error or handle it upstream
+        return Err(sqlx::Error::RowNotFound);
+    }
+
+    Ok(*uuid)
+}
