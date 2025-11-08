@@ -1,6 +1,5 @@
 use actix_web::{web};
-use sqlx::{prelude::FromRow, Executor, SqlitePool};
-use serde::{Deserialize, Serialize};
+use sqlx::{SqlitePool};
 use uuid::Uuid;
 use crate::schema::items_schema::Item;
 use crate::schema::items_schema::ItemBase;
@@ -24,7 +23,7 @@ pub async fn get_item_by_uuid(item_uuid: &Uuid, pool: &web::Data<SqlitePool>) ->
 pub async fn add_item(item: ItemBase, pool: &web::Data<SqlitePool>) -> Result<Uuid, sqlx::Error> {
     let new_uuid = Uuid::new_v4();
 
-    let new_item = sqlx::query("INSERT INTO items (uuid, name, description) VALUES (?1, ?2, ?3)")
+    sqlx::query("INSERT INTO items (uuid, name, description) VALUES (?1, ?2, ?3)")
         .bind(new_uuid.to_string())
         .bind(&item.name)
         .bind(&item.description)
@@ -34,7 +33,7 @@ pub async fn add_item(item: ItemBase, pool: &web::Data<SqlitePool>) -> Result<Uu
 }
 
 pub async fn edit_item(uuid: &Uuid, item: ItemBase, pool: &web::Data<SqlitePool>) -> Result<Uuid, sqlx::Error> {
-    let new_item = sqlx::query("UPDATE items SET name = ?1, description = ?2 WHERE uuid = ?3")
+    sqlx::query("UPDATE items SET name = ?1, description = ?2 WHERE uuid = ?3")
         .bind(&item.name)
         .bind(&item.description)
         .bind(uuid.to_string())

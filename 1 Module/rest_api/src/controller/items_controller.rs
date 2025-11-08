@@ -6,7 +6,7 @@ use crate::schema::items_schema::Item;
 use crate::schema::items_schema::ItemBase;
 use crate::models::items_model::{get_items_list, get_item_by_uuid, add_item, edit_item, remove_item};
 use sqlx::{SqlitePool};
-use utoipa::{path, ToSchema};
+use utoipa;
 
 #[derive(Deserialize)]
 pub struct ItemQuery {
@@ -134,6 +134,6 @@ pub async fn delete_item(query: web::Query<ItemQuery>, pool: web::Data<SqlitePoo
 
     match result {
         Ok(_) => HttpResponse::Ok().json(json!({ "delete": query.item_id })),
-        Err(err) => HttpResponse::InternalServerError().finish(),
+        Err(_err) => HttpResponse::InternalServerError().finish(),
     }
 }

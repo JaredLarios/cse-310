@@ -4,7 +4,7 @@ mod models;
 mod schema;
 mod utils;
 
-use utoipa::{Modify, OpenApi};
+use utoipa::{OpenApi};
 use utoipa_swagger_ui::SwaggerUi;
 
 async fn hello() -> impl Responder {

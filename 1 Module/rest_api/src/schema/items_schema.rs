@@ -1,6 +1,5 @@
 use serde::{Serialize, Deserialize};
 use sqlx::{prelude::FromRow};
-use uuid::Uuid;
 use utoipa::ToSchema;
 
 #[derive(Serialize, Deserialize, FromRow, ToSchema)]
