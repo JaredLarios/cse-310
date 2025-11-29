@@ -19,12 +19,12 @@ The development environment includes:
 - **Git & GitHub** for version control and collaboration.
 - Future modules will include:
   - **Flutter or Kotlin** for mobile development.
-  - **Unity, Godot, or Bevy** for game framework exploration.
+  - **Pygame** for game framework exploration.
 
 Programming Languages used:
 - **Rust** (Module 1)
-- **Dart** (Module 2 – Mobile)
-- **Rust** (Module 3 – Game Framework)
+- **Python** (Module 2 – Game Framework)
+- **Dart** (Module 3 – Mobile)
 
 ---
 
@@ -37,3 +37,6 @@ Programming Languages used:
 * [Bevy Game Engine](https://bevyengine.org/)
 * [Flutter Documentation](https://flutter.dev/docs)
 * [GitHub Guides](https://guides.github.com/)
+
+* https://www.pygame.org/docs/
+* http://docs.python.org/3/
