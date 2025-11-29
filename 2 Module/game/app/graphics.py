@@ -40,3 +40,20 @@ class Graphics:
         y = row * (HEIGHT/3) + 30
         img = self.x_img if player == "x" else self.o_img
         self.screen.blit(img, (x, y))
+
+    def draw_loaded_board(self, board):
+        cell_size = WIDTH // 3
+
+        for row in range(3):
+            for col in range(3):
+                mark = board.board[row][col]
+                if mark is None:
+                    continue
+
+                pos_x = col * cell_size + 30
+                pos_y = row * cell_size + 30
+
+                if mark == "x":
+                    self.screen.blit(self.x_img, (pos_x, pos_y))
+                else:
+                    self.screen.blit(self.o_img, (pos_x, pos_y))
