@@ -7,6 +7,14 @@ from app.graphics import Graphics
 from app.rules import GameLogic
 
 def main():
+    """
+    Main entry point for the Tic Tac Toe game.
+
+    This function initializes Pygame, loads or creates the game board,
+    sets up graphics, and runs the main game loop. It handles user input,
+    updates the game state, draws moves on the screen, and saves the board state
+    so the game can continue after restarting the application.
+    """
     pg.init()
     screen = pg.display.set_mode((WIDTH, HEIGHT + 100))
     pg.display.set_caption("Tic Tac Toe")

@@ -2,7 +2,19 @@ from app.settings import WIDTH, HEIGHT, RED
 import pygame as pg
 
 class GameLogic:
+    """
+    Contains the core logic for detecting wins and draw conditions
+    in the Tic Tac Toe game.
+    """
     def check_winner(self, board, screen):
+        """
+        Check the current board state to determine if a player has won
+        or if the game ended in a draw.
+
+        Args:
+            board (Board): The current game board object containing grid state.
+            screen (pygame.Surface): The screen where winning lines are drawn.
+        """
         # Rows
         for r in range(3):
             if board.board[r][0] == board.board[r][1] == board.board[r][2] and board.board[r][0]:
