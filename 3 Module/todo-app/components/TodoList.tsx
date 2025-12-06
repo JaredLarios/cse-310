@@ -10,18 +10,20 @@ export default function TodoList() {
     const [tasks, setTasks] = useState<TaskI[]>([]);
     const [text, setText] = useState('');
 
-    // Load items on start
+    // Load items when the component mounts
     useEffect(() => {
         loadItems();
     }, []);
 
+    // Fetch items from the database and update state
     async function loadItems() {
         const items = await getItems();
         setTasks(items);
     }
 
-    // Add task (SQLite)
+    // Add a new task to SQLite
     async function addTask() {
+        // Ignore empty or whitespace-only input
         if (!text.trim()) return;
         await addTodoItem({
             text, completed: false,
@@ -31,13 +33,13 @@ export default function TodoList() {
         setText('');
     }
 
-    // Delete task
+    // Delete a task by its ID
     async function deleteTask(id: number) {
         await deleteItem({id});
         await loadItems();
     }
 
-    // Toggle completed
+    // Toggle the completed status for a task
     async function toggleCompleted(id: number) {
         await updateItemStatus({id});
         await loadItems();
