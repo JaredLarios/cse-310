@@ -1,3 +1,16 @@
 **/target/
 **/env/
 **/node_modules
+
+key.properties
+**/*.keystore
+**/*.jks
+
+**/gradle-wrapper.jar
+**/todo_app/.gradle
+**/todo_app/captures/
+**/todo_app/gradlew
+**/todo_app/gradlew.bat
+**/todo_app/local.properties
+**/todo_appGeneratedPluginRegistrant.java
+**/todo_app.cxx/
