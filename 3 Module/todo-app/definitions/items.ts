@@ -1,7 +1,7 @@
 export interface TaskI {
     id: number,
     text: string,
-    completed: boolean
+    completed: boolean 
 }
 
 export interface TaskDB {
@@ -13,5 +13,5 @@ export interface TaskDB {
 export interface ItemI {
     task: TaskI,
     deleteTask: (id: number) => void,
-    toggleCompleted: (id: number, completed: boolean) => void,
+    toggleCompleted: (id: number) => void,
 }

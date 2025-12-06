@@ -2,12 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 import TodoItem from './TodoItem';
 
-import { 
-    getItems, 
-    addTodoItem, 
-    deleteItem, 
-    updateItemStatus 
-} from '../models/item';
+import { getItems, addTodoItem, deleteItem, updateItemStatus } from '../models/item';
 
 import { TaskI } from '../definitions/items';
 
